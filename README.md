@@ -25,8 +25,17 @@ npm install qr-image
 
 Usage
 -----
+Example: **ES6 or Latter** 
+```javascript
+import qr from "qr-image";
 
-Example:
+var qr_svg = qr.image('I love QR!', { type: 'svg' });
+qr_svg.pipe(fs.createWriteStream('i_love_qr.svg'));
+
+var svg_string = qr.imageSync('I love QR!', { type: 'svg' });
+```
+
+Example: **Older then ES6**
 ```javascript
 var qr = require('qr-image');
 
